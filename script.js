@@ -1,6 +1,23 @@
-const magicBall = document.getElementById("magicBall");
-const answerText = document.getElementById("answerText");
-const questionInput = document.getElementById("question");
+const container = document.createElement("div");
+container.classList.add("container");
+const title = document.createElement("h1");
+title.textContent = "Магічна куля";
+const questionInput = document.createElement("input");
+questionInput.type = "text";
+questionInput.id = "question";
+questionInput.placeholder = "Введіть своє запитання...";
+const magicBall = document.createElement("div");
+magicBall.classList.add("magic-ball");
+magicBall.id = "magicBall";
+const answerText = document.createElement("div");
+answerText.classList.add("inner-text");
+answerText.id = "answerText";
+answerText.textContent = "?";
+magicBall.appendChild(answerText);
+container.appendChild(title);
+container.appendChild(questionInput);
+container.appendChild(magicBall);
+document.body.appendChild(container);
 const answers = [
   "Так!",
   "Ні",
